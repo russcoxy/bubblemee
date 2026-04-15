@@ -68,7 +68,7 @@ const Studio = () => {
         </div>
 
         {/* Tab bar */}
-        <div className="mt-3 flex gap-1 overflow-x-auto pb-2 scrollbar-none">
+        <div className="mt-3 flex justify-center gap-1 overflow-x-auto pb-2 scrollbar-none">
           {tabs.map(tab => (
             <button
               key={tab.key}
