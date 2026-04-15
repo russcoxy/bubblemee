@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SquarePen, ChevronLeft, Search, Send } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
+import AppHeader from "@/components/AppHeader";
 
 const conversations = [
   { name: "Russ Cox", handle: "@russcoxy", avatar: "https://i.pravatar.cc/80?img=33", lastMsg: "Hey 👋", time: "3s" },
@@ -85,7 +86,8 @@ const Messages = () => {
 
   return (
     <div className="min-h-screen bg-background pb-20 md:mx-auto md:w-[60%]">
-      <header className="flex items-center justify-between px-4 pt-6 pb-2">
+      <AppHeader />
+      <div className="flex items-center justify-between px-4 pt-2 pb-2">
         <h1 className="text-3xl font-extrabold">Messages</h1>
         <button
           onClick={() => setView("new")}
@@ -93,7 +95,7 @@ const Messages = () => {
         >
           <SquarePen className="h-5 w-5" />
         </button>
-      </header>
+      </div>
 
       <div className="divide-y divide-border">
         {conversations.map((conv) => (
