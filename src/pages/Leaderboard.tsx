@@ -89,7 +89,7 @@ const Leaderboard = () => {
       {(tab === "global" || (tab === "private" && privateView === "list")) && (
         <>
           <AppHeader />
-          <div className="px-4 pt-4 pb-2">
+          <div className="mx-auto px-4 pt-4 pb-2 md:w-[60%]">
             <div className="flex items-center gap-2">
               <TrendingUp className="h-6 w-6 text-primary" />
               <h1 className="text-3xl font-extrabold">Leaderboard</h1>
@@ -112,7 +112,7 @@ const Leaderboard = () => {
             </div>
           </div>
 
-          <main className="px-4">
+          <main className="mx-auto px-4 md:w-[60%]">
             {tab === "global" && (
               <>
                 {/* Time filter */}
