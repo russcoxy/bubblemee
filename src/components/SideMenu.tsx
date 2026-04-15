@@ -1,5 +1,6 @@
 import { X, Heart, Bell, CreditCard, RefreshCw, Receipt, Settings, HelpCircle, LogOut, Wallet } from "lucide-react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
+import bIcon from "@/assets/b-icon.jpeg";
 
 interface SideMenuProps {
   open: boolean;
@@ -57,9 +58,7 @@ const SideMenu = ({ open, onOpenChange }: SideMenuProps) => {
         {/* Studio */}
         <div className="px-4 pt-2">
           <div className="flex items-center gap-2.5 rounded-xl bg-foreground px-4 py-2.5 text-background">
-            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-pink-500 to-orange-400 flex items-center justify-center text-white font-bold text-xs">
-              B
-            </div>
+            <img src={bIcon} alt="BubbleMee" className="h-8 w-8 rounded-lg object-cover" />
             <div className="flex-1">
               <p className="font-bold text-[13px] leading-tight">Studio</p>
               <p className="text-[10px] opacity-60">Manage your content & analytics</p>
