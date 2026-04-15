@@ -7,12 +7,18 @@ const toSlug = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-"
 
 /* ─── mock data ─── */
 const dancers = [
-  { name: "Justin Neto", img: "https://i.pravatar.cc/100?img=11" },
-  { name: "Shuffle Ma…", img: "https://i.pravatar.cc/100?img=12" },
-  { name: "George Beet", img: "https://i.pravatar.cc/100?img=13" },
-  { name: "Jordan Grace", img: "https://i.pravatar.cc/100?img=14" },
-  { name: "Estelle Bliah", img: "https://i.pravatar.cc/100?img=15" },
-  { name: "Alex Rose", img: "https://i.pravatar.cc/100?img=16" },
+  { name: "Justin Neto", img: "https://i.pravatar.cc/100?img=11", slug: "justin-neto" },
+  { name: "Shuffle Ma…", img: "https://i.pravatar.cc/100?img=12", slug: "shuffle-ma" },
+  { name: "George Beet", img: "https://i.pravatar.cc/100?img=13", slug: "george-beet" },
+  { name: "Jordan Grace", img: "https://i.pravatar.cc/100?img=14", slug: "jordan-grace" },
+  { name: "Estelle Bliah", img: "https://i.pravatar.cc/100?img=15", slug: "estelle-bliah" },
+  { name: "Alex Rose", img: "https://i.pravatar.cc/100?img=16", slug: "alex-rose" },
+];
+
+const following = [
+  { name: "Estelle Bliah", img: "https://i.pravatar.cc/100?img=15", slug: "estelle-bliah" },
+  { name: "Jordan Grace", img: "https://i.pravatar.cc/100?img=14", slug: "jordan-grace" },
+  { name: "Alex Rose", img: "https://i.pravatar.cc/100?img=16", slug: "alex-rose" },
 ];
 
 const trendingVideos: Video[] = [
@@ -98,11 +104,24 @@ const Home = () => {
       <AppHeader />
 
       <main className="mx-auto px-4 md:w-[60%]">
+        {/* ─── Following row ─── */}
+        <h2 className="mb-3 mt-2 text-xl font-extrabold">Following</h2>
+        <div className="mb-5 flex gap-4 md:gap-8 overflow-x-auto pb-1 scrollbar-none">
+          {following.map((d) => (
+            <div key={d.name} className="flex w-16 md:w-24 shrink-0 flex-col items-center gap-1 cursor-pointer" onClick={() => navigate(`/creator/${d.slug}`)}>
+              <div className="h-16 w-16 md:h-24 md:w-24 overflow-hidden rounded-full border-2 border-primary/30">
+                <img src={d.img} alt={d.name} className="h-full w-full object-cover" />
+              </div>
+              <span className="w-full truncate text-center text-[11px]">{d.name}</span>
+            </div>
+          ))}
+        </div>
+
         {/* ─── Dancers row ─── */}
-        <h2 className="mb-3 mt-2 text-xl font-extrabold">Dancers</h2>
+        <h2 className="mb-3 text-xl font-extrabold">Dancers</h2>
         <div className="mb-5 flex gap-4 md:gap-8 overflow-x-auto pb-1 scrollbar-none">
           {dancers.map((d) => (
-            <div key={d.name} className="flex w-16 md:w-24 shrink-0 flex-col items-center gap-1">
+            <div key={d.name} className="flex w-16 md:w-24 shrink-0 flex-col items-center gap-1 cursor-pointer" onClick={() => navigate(`/creator/${d.slug}`)}>
               <div className="h-16 w-16 md:h-24 md:w-24 overflow-hidden rounded-full border-2 border-primary/30">
                 <img src={d.img} alt={d.name} className="h-full w-full object-cover" />
               </div>
