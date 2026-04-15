@@ -12,13 +12,12 @@ const dancers = [
   { name: "Alex Rose", img: "https://i.pravatar.cc/100?img=16" },
 ];
 
-const trendingVideo = {
-  title: "Kiss More",
-  creator: "@estellebliah",
-  views: 182,
-  thumb: "https://images.unsplash.com/photo-1547153760-18fc86ef706d?w=800&q=80",
-  avatar: "https://i.pravatar.cc/40?img=15",
-};
+const trendingVideos: Video[] = [
+  { title: "Kiss More", creator: "@estellebliah", views: 182, thumb: "https://images.unsplash.com/photo-1547153760-18fc86ef706d?w=800&q=80", avatar: "https://i.pravatar.cc/40?img=15" },
+  { title: "Laxed (Siren Beat)", creator: "@estellebliah", views: 115, thumb: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80", avatar: "https://i.pravatar.cc/40?img=12" },
+  { title: "Cupid", creator: "@estellebliah", views: 119, thumb: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&q=80", avatar: "https://i.pravatar.cc/40?img=13" },
+  { title: "Say So", creator: "@estellebliah", views: 480, thumb: "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800&q=80", avatar: "https://i.pravatar.cc/40?img=14" },
+];
 
 interface Video {
   title: string;
