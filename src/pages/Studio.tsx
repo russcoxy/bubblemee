@@ -85,7 +85,7 @@ const Studio = () => {
         </div>
       </div>
 
-      <div className="px-4 pb-8">
+      <div className="px-4 pb-8 mx-auto md:w-[60%]">
         {/* DASHBOARD */}
         {activeTab === "dashboard" && (
           <div>
