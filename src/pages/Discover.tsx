@@ -27,7 +27,7 @@ const Discover = () => {
   const [timeFilter, setTimeFilter] = useState<TimeFilter>("week");
 
   return (
-    <div className="min-h-screen bg-background pb-20">
+    <div className="min-h-screen bg-background pb-20 md:mx-auto md:w-[60%]">
       {/* Header */}
       <header className="px-4 pt-6 pb-2">
         <h1 className="text-3xl font-extrabold">Discover</h1>
