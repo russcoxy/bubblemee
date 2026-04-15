@@ -113,7 +113,7 @@ const Home = () => {
 
         {/* ─── Trending ─── */}
         <h2 className="mb-3 text-xl font-extrabold">Trending</h2>
-        <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-3">
           {trendingVideos.map((video, i) => (
             <div key={i} className="flex flex-col cursor-pointer" onClick={() => navigate(`/video/${toSlug(video.title)}`)}>
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted">
@@ -144,16 +144,14 @@ const Home = () => {
 
         {/* ─── New Drops ─── */}
         <SectionHeader title="New Drops" subtitle="Dance videos" count={newDrops.length} />
-        <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {newDrops.map((v, i) => (
+        <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-3">
             <VideoCard key={`new-${i}`} video={v} />
           ))}
         </div>
 
         {/* ─── Popular ─── */}
         <SectionHeader title="Popular" subtitle="Trending dance" count={popular.length} />
-        <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
-          {popular.map((v, i) => (
+        <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-3">
             <VideoCard key={`pop-${i}`} video={v} />
           ))}
         </div>
