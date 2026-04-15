@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Search, ChevronRight, Music } from "lucide-react";
+import { ChevronRight, Music } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
+import AppHeader from "@/components/AppHeader";
 
 /* ─── mock data ─── */
 const topDances = [
@@ -28,16 +29,7 @@ const Discover = () => {
 
   return (
     <div className="min-h-screen bg-background pb-20 md:mx-auto md:w-[60%]">
-      {/* Header */}
-      <header className="px-4 pt-6 pb-2">
-        <h1 className="text-3xl font-extrabold">Discover</h1>
-
-        {/* Search */}
-        <div className="mt-4 flex items-center gap-2 rounded-xl bg-muted px-4 py-2.5">
-          <Search className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm text-muted-foreground">Search videos, top dancers, users, hashtags</span>
-        </div>
-      </header>
+      <AppHeader />
 
       <main className="px-4">
         {/* ─── Top 10 Dances ─── */}

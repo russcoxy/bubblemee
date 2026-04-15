@@ -1,5 +1,6 @@
 import { Heart, MessageCircle, MoreHorizontal, Play, Copy } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
+import AppHeader from "@/components/AppHeader";
 
 const posts = [
   {
@@ -44,10 +45,7 @@ const posts = [
 const Posts = () => {
   return (
     <div className="min-h-screen bg-background pb-20">
-      {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-border bg-background px-4 py-3">
-        <h1 className="text-center text-lg font-bold">Posts</h1>
-      </header>
+      <AppHeader />
 
       {/* Feed */}
       <div className="mx-auto md:w-[60%]">
