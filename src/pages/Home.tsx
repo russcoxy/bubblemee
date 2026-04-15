@@ -63,7 +63,7 @@ const VideoCard = ({ video }: { video: Video }) => (
         </div>
       </div>
     </div>
-    <p className="mt-1.5 truncate text-sm font-bold">{video.title}</p>
+    <p className="mt-1.5 truncate text-sm md:text-xs font-bold">{video.title}</p>
   </div>
 );
 
