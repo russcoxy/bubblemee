@@ -13,12 +13,23 @@ const dancers = [
   { name: "Jordan Grace", img: "https://i.pravatar.cc/100?img=14", slug: "jordan-grace" },
   { name: "Estelle Bliah", img: "https://i.pravatar.cc/100?img=15", slug: "estelle-bliah" },
   { name: "Alex Rose", img: "https://i.pravatar.cc/100?img=16", slug: "alex-rose" },
+  { name: "Mia Chen", img: "https://i.pravatar.cc/100?img=21", slug: "mia-chen" },
+  { name: "Kai Williams", img: "https://i.pravatar.cc/100?img=33", slug: "kai-williams" },
+  { name: "Priya Patel", img: "https://i.pravatar.cc/100?img=25", slug: "priya-patel" },
+  { name: "Leo Martinez", img: "https://i.pravatar.cc/100?img=52", slug: "leo-martinez" },
 ];
 
 const following = [
   { name: "Estelle Bliah", img: "https://i.pravatar.cc/100?img=15", slug: "estelle-bliah" },
   { name: "Jordan Grace", img: "https://i.pravatar.cc/100?img=14", slug: "jordan-grace" },
   { name: "Alex Rose", img: "https://i.pravatar.cc/100?img=16", slug: "alex-rose" },
+  { name: "Mia Chen", img: "https://i.pravatar.cc/100?img=21", slug: "mia-chen" },
+  { name: "Kai Williams", img: "https://i.pravatar.cc/100?img=33", slug: "kai-williams" },
+  { name: "Priya Patel", img: "https://i.pravatar.cc/100?img=25", slug: "priya-patel" },
+  { name: "Leo Martinez", img: "https://i.pravatar.cc/100?img=52", slug: "leo-martinez" },
+  { name: "Justin Neto", img: "https://i.pravatar.cc/100?img=11", slug: "justin-neto" },
+  { name: "George Beet", img: "https://i.pravatar.cc/100?img=13", slug: "george-beet" },
+  { name: "Shuffle Ma…", img: "https://i.pravatar.cc/100?img=12", slug: "shuffle-ma" },
 ];
 
 const trendingVideos: Video[] = [
