@@ -85,9 +85,9 @@ const Messages = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background pb-20 md:mx-auto md:w-[60%]">
+    <div className="min-h-screen bg-background pb-20">
       <AppHeader />
-      <div className="flex items-center justify-between px-4 pt-2 pb-2">
+      <div className="mx-auto flex items-center justify-between px-4 pt-2 pb-2 md:w-[60%]">
         <h1 className="text-3xl font-extrabold">Messages</h1>
         <button
           onClick={() => setView("new")}
@@ -97,7 +97,7 @@ const Messages = () => {
         </button>
       </div>
 
-      <div className="divide-y divide-border">
+      <div className="mx-auto divide-y divide-border md:w-[60%]">
         {conversations.map((conv) => (
           <button
             key={conv.handle}

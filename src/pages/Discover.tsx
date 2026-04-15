@@ -28,10 +28,10 @@ const Discover = () => {
   const [timeFilter, setTimeFilter] = useState<TimeFilter>("week");
 
   return (
-    <div className="min-h-screen bg-background pb-20 md:mx-auto md:w-[60%]">
+    <div className="min-h-screen bg-background pb-20">
       <AppHeader />
 
-      <main className="px-4">
+      <main className="mx-auto px-4 md:w-[60%]">
         {/* ─── Top 10 Dances ─── */}
         <div className="mt-4 rounded-2xl border border-border bg-card p-4">
           <div className="mb-3 flex items-center gap-2">

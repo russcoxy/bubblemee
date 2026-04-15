@@ -92,7 +92,7 @@ const Home = () => {
       {/* ─── Header ─── */}
       <AppHeader />
 
-      <main className="px-4">
+      <main className="mx-auto px-4 md:w-[60%]">
         {/* ─── Dancers row ─── */}
         <h2 className="mb-3 mt-2 text-xl font-extrabold">Dancers</h2>
         <div className="mb-5 flex gap-4 md:gap-8 overflow-x-auto pb-1 scrollbar-none">
