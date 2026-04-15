@@ -23,7 +23,7 @@ const SideMenu = ({ open, onOpenChange }: SideMenuProps) => {
   const navigate = useNavigate();
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent side="right" className="w-[85%] max-w-sm p-0 flex flex-col bg-background border-l-0 shadow-2xl [&>button]:hidden">
+      <SheetContent side="right" className="w-full sm:max-w-sm p-0 flex flex-col bg-background border-l-0 shadow-2xl [&>button]:hidden">
         {/* Close */}
         <div className="flex justify-end px-5 pt-4">
           <button
