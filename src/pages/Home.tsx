@@ -12,13 +12,12 @@ const dancers = [
   { name: "Alex Rose", img: "https://i.pravatar.cc/100?img=16" },
 ];
 
-const trendingVideo = {
-  title: "Kiss More",
-  creator: "@estellebliah",
-  views: 182,
-  thumb: "https://images.unsplash.com/photo-1547153760-18fc86ef706d?w=800&q=80",
-  avatar: "https://i.pravatar.cc/40?img=15",
-};
+const trendingVideos: Video[] = [
+  { title: "Kiss More", creator: "@estellebliah", views: 182, thumb: "https://images.unsplash.com/photo-1547153760-18fc86ef706d?w=800&q=80", avatar: "https://i.pravatar.cc/40?img=15" },
+  { title: "Laxed (Siren Beat)", creator: "@estellebliah", views: 115, thumb: "https://images.unsplash.com/photo-1508700929628-666bc8bd84ea?w=800&q=80", avatar: "https://i.pravatar.cc/40?img=12" },
+  { title: "Cupid", creator: "@estellebliah", views: 119, thumb: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=800&q=80", avatar: "https://i.pravatar.cc/40?img=13" },
+  { title: "Say So", creator: "@estellebliah", views: 480, thumb: "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=800&q=80", avatar: "https://i.pravatar.cc/40?img=14" },
+];
 
 interface Video {
   title: string;
@@ -122,29 +121,30 @@ const Home = () => {
           ))}
         </div>
 
-        {/* ─── Trending hero ─── */}
-        <div className="relative mb-6 overflow-hidden rounded-2xl">
-          <div className="absolute left-3 top-3 rounded-full bg-foreground/70 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
-            Trending
-          </div>
-          <img
-            src={trendingVideo.thumb}
-            alt={trendingVideo.title}
-            className="aspect-[4/5] w-full object-cover"
-          />
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-            <div className="flex items-center gap-2">
-              <img src={trendingVideo.avatar} alt="" className="h-8 w-8 rounded-full border border-white/60" />
-              <span className="text-sm font-semibold text-white">{trendingVideo.creator}</span>
-            </div>
-            <div className="mt-1 flex items-center justify-between">
-              <span className="text-lg font-bold text-white">{trendingVideo.title}</span>
-              <div className="flex items-center gap-1 text-sm text-white">
-                <Eye className="h-4 w-4" />
-                {trendingVideo.views}
+        {/* ─── Trending ─── */}
+        <h2 className="mb-3 text-xl font-extrabold">Trending</h2>
+        <div className="mb-6 grid grid-cols-1 gap-3 md:grid-cols-4">
+          {trendingVideos.map((video, i) => (
+            <div key={i} className="relative overflow-hidden rounded-2xl">
+              <div className="absolute left-3 top-3 z-10 rounded-full bg-foreground/70 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                Trending
+              </div>
+              <img src={video.thumb} alt={video.title} className="aspect-[4/5] w-full object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <div className="flex items-center gap-2">
+                  <img src={video.avatar} alt="" className="h-8 w-8 rounded-full border border-white/60" />
+                  <span className="text-sm font-semibold text-white">{video.creator}</span>
+                </div>
+                <div className="mt-1 flex items-center justify-between">
+                  <span className="text-lg font-bold text-white">{video.title}</span>
+                  <div className="flex items-center gap-1 text-sm text-white">
+                    <Eye className="h-4 w-4" />
+                    {video.views}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
 
         {/* ─── New Drops ─── */}
