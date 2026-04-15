@@ -91,6 +91,7 @@ const SectionHeader = ({ title, subtitle, count }: { title: string; subtitle: st
 );
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background pb-20">
       {/* ─── Header ─── */}
