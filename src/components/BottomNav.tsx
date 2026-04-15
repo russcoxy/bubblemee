@@ -3,7 +3,7 @@ import { Home, Search, LayoutList, BarChart3, MessageCircle, User } from "lucide
 
 const tabs = [
   { icon: Home, path: "/home", label: "Home" },
-  { icon: Search, path: "/search", label: "Search" },
+  { icon: Search, path: "/discover", label: "Discover" },
   { icon: LayoutList, path: "/playlists", label: "Playlists" },
   { icon: BarChart3, path: "/stats", label: "Stats" },
   { icon: MessageCircle, path: "/messages", label: "Messages" },
