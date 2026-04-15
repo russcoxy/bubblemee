@@ -19,6 +19,7 @@ const menuItems = [
 ];
 
 const SideMenu = ({ open, onOpenChange }: SideMenuProps) => {
+  const navigate = useNavigate();
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent side="right" className="w-full max-w-sm p-0 flex flex-col [&>button]:hidden">
@@ -58,14 +59,17 @@ const SideMenu = ({ open, onOpenChange }: SideMenuProps) => {
 
         {/* Studio */}
         <div className="px-4 pt-2">
-          <div className="flex items-center gap-2.5 rounded-xl bg-foreground px-4 py-2.5 text-background">
+          <button
+            onClick={() => { onOpenChange(false); navigate("/studio"); }}
+            className="flex w-full items-center gap-2.5 rounded-xl bg-foreground px-4 py-2.5 text-background text-left"
+          >
             <img src={bIcon} alt="BubbleMee" className="h-8 w-8 rounded-lg object-cover" />
             <div className="flex-1">
               <p className="font-bold text-[13px] leading-tight">Studio</p>
               <p className="text-[10px] opacity-60">Manage your content & analytics</p>
             </div>
             <span className="rounded-full border border-background/30 px-2 py-0.5 text-[10px] font-medium">Creator</span>
-          </div>
+          </button>
         </div>
 
         {/* Menu items */}
