@@ -44,31 +44,32 @@ const popular = makeVideos("popular");
 
 /* ─── components ─── */
 
-const VideoCard = ({ video }: { video: Video }) => (
-  <div className="flex flex-col">
-    <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted">
-      <img src={video.thumb} alt={video.title} className="h-full w-full object-cover" loading="lazy" />
-      {/* play button */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/40">
-          <Play className="h-5 w-5 fill-white text-white" />
+const VideoCard = ({ video }: { video: Video }) => {
+  const navigate = useNavigate();
+  return (
+    <div className="flex flex-col cursor-pointer" onClick={() => navigate(`/video/${toSlug(video.title)}`)}>
+      <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted">
+        <img src={video.thumb} alt={video.title} className="h-full w-full object-cover" loading="lazy" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/40">
+            <Play className="h-5 w-5 fill-white text-white" />
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-3 py-2">
+          <div className="flex items-center gap-1.5">
+            <img src={video.avatar} alt="" className="h-6 w-6 rounded-full border border-white/60" />
+            <span className="text-xs font-medium text-white drop-shadow">{video.creator}</span>
+          </div>
+          <div className="flex items-center gap-1 text-xs text-white drop-shadow">
+            <Eye className="h-3.5 w-3.5" />
+            {video.views}
+          </div>
         </div>
       </div>
-      {/* bottom overlay */}
-      <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-3 py-2">
-        <div className="flex items-center gap-1.5">
-          <img src={video.avatar} alt="" className="h-6 w-6 rounded-full border border-white/60" />
-          <span className="text-xs font-medium text-white drop-shadow">{video.creator}</span>
-        </div>
-        <div className="flex items-center gap-1 text-xs text-white drop-shadow">
-          <Eye className="h-3.5 w-3.5" />
-          {video.views}
-        </div>
-      </div>
+      <p className="mt-1.5 truncate text-sm md:text-xs font-bold">{video.title}</p>
     </div>
-    <p className="mt-1.5 truncate text-sm md:text-xs font-bold">{video.title}</p>
-  </div>
-);
+  );
+};
 
 const SectionHeader = ({ title, subtitle, count }: { title: string; subtitle: string; count: number }) => (
   <div className="mb-3 flex items-end justify-between">
