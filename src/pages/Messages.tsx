@@ -47,7 +47,7 @@ const Messages = () => {
     return (
       <div className="flex min-h-screen flex-col bg-background">
         <AppHeader />
-        <div className="mx-auto flex flex-1 flex-col md:w-[60%]">
+        <div className="flex w-full flex-1 flex-col md:mx-auto md:w-[60%]">
           <div className="flex items-center gap-3 px-4 pt-4 pb-3 border-b border-border">
             <button onClick={() => setView("list")}>
               <ChevronLeft className="h-6 w-6" />
