@@ -10,6 +10,7 @@ import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Discover from "./pages/Discover";
 import Posts from "./pages/Posts";
+import Leaderboard from "./pages/Leaderboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/home" element={<Home />} />
           <Route path="/discover" element={<Discover />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

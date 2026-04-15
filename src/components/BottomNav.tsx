@@ -5,7 +5,7 @@ const tabs = [
   { icon: Home, path: "/home", label: "Home" },
   { icon: Search, path: "/discover", label: "Discover" },
   { icon: LayoutList, path: "/posts", label: "Posts" },
-  { icon: BarChart3, path: "/stats", label: "Stats" },
+  { icon: BarChart3, path: "/leaderboard", label: "Stats" },
   { icon: MessageCircle, path: "/messages", label: "Messages" },
   { icon: User, path: "/profile", label: "Profile" },
 ];
