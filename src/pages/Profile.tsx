@@ -97,8 +97,8 @@ const Profile = () => {
               }`}
               style={activeTab === key ? { borderColor: "hsl(347 70% 55%)" } : {}}
             >
-              {icon}
-              {label}
+              <span style={activeTab === key ? { color: "hsl(347 70% 55%)" } : {}}>{icon}</span>
+              <span>{label}</span>
             </button>
           ))}
         </div>
