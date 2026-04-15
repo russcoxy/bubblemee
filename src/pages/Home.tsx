@@ -112,8 +112,8 @@ const Home = () => {
         <h2 className="mb-3 mt-2 text-xl font-extrabold">Dancers</h2>
         <div className="mb-5 flex gap-4 md:gap-8 overflow-x-auto pb-1 scrollbar-none">
           {dancers.map((d) => (
-            <div key={d.name} className="flex w-16 shrink-0 flex-col items-center gap-1">
-              <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-primary/30">
+            <div key={d.name} className="flex w-16 md:w-24 shrink-0 flex-col items-center gap-1">
+              <div className="h-16 w-16 md:h-24 md:w-24 overflow-hidden rounded-full border-2 border-primary/30">
                 <img src={d.img} alt={d.name} className="h-full w-full object-cover" />
               </div>
               <span className="w-full truncate text-center text-[11px]">{d.name}</span>
