@@ -92,9 +92,10 @@ const Profile = () => {
               onClick={() => setActiveTab(key)}
               className={`flex flex-1 flex-col items-center gap-1 py-3 text-xs font-bold transition-colors ${
                 activeTab === key
-                  ? "text-primary border-b-2 border-primary"
+                  ? "text-foreground border-b-[3px]"
                   : "text-muted-foreground"
               }`}
+              style={activeTab === key ? { borderColor: "hsl(347 70% 55%)" } : {}}
             >
               {icon}
               {label}
