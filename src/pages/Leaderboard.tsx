@@ -23,13 +23,15 @@ const Leaderboard = () => {
       {/* ─── Sub-pages: Join / Create ─── */}
       {tab === "private" && privateView === "join" && (
         <div className="min-h-screen bg-background">
-          <header className="flex items-center gap-3 px-4 pt-6 pb-3">
+          <AppHeader />
+          <div className="mx-auto md:w-[60%]">
+          <div className="flex items-center gap-3 px-4 pt-4 pb-3">
             <button onClick={() => setPrivateView("list")} className="flex h-10 w-10 items-center justify-center rounded-full bg-muted">
               <ChevronLeft className="h-5 w-5" />
             </button>
             <h1 className="flex-1 text-center text-lg font-bold">Join Leaderboard</h1>
             <div className="w-10" />
-          </header>
+          </div>
           <div className="border-t border-border px-6 pt-6">
             <p className="text-muted-foreground">Enter the 8-character invite code your friend shared with you.</p>
             <label className="mt-6 block text-xs font-bold uppercase tracking-wider text-muted-foreground">Invite Code</label>
