@@ -94,7 +94,7 @@ const Home = () => {
       <header className="sticky top-0 z-40 bg-background px-4 pt-3 pb-2">
         <div className="flex items-center justify-between">
           <img src="https://i.pravatar.cc/40?img=5" alt="avatar" className="h-9 w-9 rounded-full" />
-          <img src={logo} alt="BubbleMee" className="h-7" />
+          <img src={logoText} alt="BubbleMee" className="h-7" />
           <div className="flex items-center gap-3">
             <button aria-label="Notifications"><Bell className="h-6 w-6 text-foreground" /></button>
             <button aria-label="Share"><Send className="h-6 w-6 text-foreground" /></button>
