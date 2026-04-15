@@ -114,7 +114,7 @@ const Home = () => {
         <h2 className="mb-3 text-xl font-extrabold">Trending</h2>
         <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4">
           {trendingVideos.map((video, i) => (
-            <div key={i} className="flex flex-col">
+            <div key={i} className="flex flex-col cursor-pointer" onClick={() => navigate(`/video/${toSlug(video.title)}`)}>
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted">
                 <div className="absolute left-3 top-3 z-10 rounded-full bg-foreground/70 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
                   Trending
