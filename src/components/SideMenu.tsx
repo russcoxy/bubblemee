@@ -78,29 +78,8 @@ const SideMenu = ({ open, onOpenChange }: SideMenuProps) => {
         </div>
 
         {/* Menu items */}
-        <div className="flex-1 overflow-auto mt-4 px-5">
-          <div className="rounded-2xl bg-muted/50 overflow-hidden">
-            {menuItems.map((item, i) => (
-              <button
-                key={i}
-                className="flex w-full items-center gap-3.5 px-4 py-3.5 text-left hover:bg-muted transition-colors active:bg-muted border-b border-border/50 last:border-0"
-              >
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-background">
-                  <item.icon className="h-4 w-4 text-muted-foreground" />
-                </div>
-                <span className="text-[13px] font-medium text-foreground">{item.label}</span>
-                <ChevronRight className="h-3.5 w-3.5 text-muted-foreground/50 ml-auto" />
-              </button>
-            ))}
-          </div>
-
-          {/* Log Out */}
-          <button className="flex w-full items-center gap-3.5 px-4 py-3.5 mt-3 rounded-2xl bg-muted/50 text-left hover:bg-muted transition-colors">
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-destructive/10">
-              <LogOut className="h-4 w-4 text-destructive" />
-            </div>
-            <span className="text-[13px] font-medium text-destructive">Log Out</span>
-          </button>
+        <div className="relative flex-1 overflow-hidden mt-4">
+          <ScrollableMenu />
         </div>
 
         {/* Footer */}
