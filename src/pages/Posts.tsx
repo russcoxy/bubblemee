@@ -50,7 +50,7 @@ const Posts = () => {
       </header>
 
       {/* Feed */}
-      <div>
+      <div className="mx-auto md:w-[60%]">
         {posts.map((post, i) => (
           <div key={i} className="border-b border-border">
             {/* User row */}
