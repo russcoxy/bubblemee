@@ -149,7 +149,7 @@ const Home = () => {
 
         {/* ─── New Drops ─── */}
         <SectionHeader title="New Drops" subtitle="Dance videos" count={newDrops.length} />
-        <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-4">
           {newDrops.map((v, i) => (
             <VideoCard key={`new-${i}`} video={v} />
           ))}
@@ -157,7 +157,7 @@ const Home = () => {
 
         {/* ─── Popular ─── */}
         <SectionHeader title="Popular" subtitle="Trending dance" count={popular.length} />
-        <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-4">
           {popular.map((v, i) => (
             <VideoCard key={`pop-${i}`} video={v} />
           ))}
