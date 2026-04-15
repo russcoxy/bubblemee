@@ -117,9 +117,6 @@ const Home = () => {
           {trendingVideos.map((video, i) => (
             <div key={i} className="flex flex-col cursor-pointer" onClick={() => navigate(`/video/${toSlug(video.title)}`)}>
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted">
-                <div className="absolute left-3 top-3 z-10 rounded-full bg-foreground/70 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
-                  Trending
-                </div>
                 <img src={video.thumb} alt={video.title} className="h-full w-full object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/40">
