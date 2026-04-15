@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { X, Heart, Bell, CreditCard, RefreshCw, Receipt, Settings, HelpCircle, LogOut, Wallet, ChevronRight } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { X, Heart, Bell, CreditCard, RefreshCw, Receipt, Settings, HelpCircle, LogOut, Wallet, ChevronRight, ChevronDown } from "lucide-react";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
 import bIcon from "@/assets/b-icon.jpeg";
 
