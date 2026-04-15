@@ -39,7 +39,7 @@ const SideMenu = ({ open, onOpenChange }: SideMenuProps) => {
 
         {/* Wallet */}
         <div className="px-4 pt-2.5">
-          <div className="rounded-xl px-4 py-3" style={{ backgroundColor: "#b5616e" }}>
+          <div className="rounded-xl px-4 py-3" style={{ backgroundColor: "hsl(347 48% 56%)" }}>
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
                 <Wallet className="h-4 w-4 text-white" />
@@ -48,7 +48,7 @@ const SideMenu = ({ open, onOpenChange }: SideMenuProps) => {
                 <p className="text-[9px] font-semibold uppercase tracking-wider text-white/80">BubbleMee Wallet</p>
                 <p className="text-xl font-bold text-white leading-tight">£45.00</p>
               </div>
-              <button className="rounded-full bg-white px-3 py-1 text-[11px] font-medium" style={{ color: "#c27080" }}>
+              <button className="rounded-full bg-white px-3 py-1 text-[11px] font-medium" style={{ color: "hsl(347 48% 56%)" }}>
                 Add funds
               </button>
             </div>
