@@ -1,6 +1,6 @@
 import { Search, Bell, Send, Play, Eye } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
-import logo from "@/assets/logo.jpeg";
+import logoText from "@/assets/logo-text.jpeg";
 
 /* ─── mock data ─── */
 const dancers = [
