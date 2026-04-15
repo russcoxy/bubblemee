@@ -125,24 +125,29 @@ const Home = () => {
         <h2 className="mb-3 text-xl font-extrabold">Trending</h2>
         <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-6">
           {trendingVideos.map((video, i) => (
-            <div key={i} className="relative overflow-hidden rounded-2xl">
-              <div className="absolute left-3 top-3 z-10 rounded-full bg-foreground/70 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
-                Trending
-              </div>
-              <img src={video.thumb} alt={video.title} className="aspect-[4/5] w-full object-cover" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <div className="flex items-center gap-2">
-                  <img src={video.avatar} alt="" className="h-8 w-8 rounded-full border border-white/60" />
-                  <span className="text-sm font-semibold text-white">{video.creator}</span>
+            <div key={i} className="flex flex-col">
+              <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted">
+                <div className="absolute left-3 top-3 z-10 rounded-full bg-foreground/70 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
+                  Trending
                 </div>
-                <div className="mt-1 flex items-center justify-between">
-                  <span className="text-lg font-bold text-white">{video.title}</span>
-                  <div className="flex items-center gap-1 text-sm text-white">
-                    <Eye className="h-4 w-4" />
+                <img src={video.thumb} alt={video.title} className="h-full w-full object-cover" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/40">
+                    <Play className="h-5 w-5 fill-white text-white" />
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 flex items-center justify-between px-3 py-2">
+                  <div className="flex items-center gap-1.5">
+                    <img src={video.avatar} alt="" className="h-6 w-6 rounded-full border border-white/60" />
+                    <span className="text-xs font-medium text-white drop-shadow">{video.creator}</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-xs text-white drop-shadow">
+                    <Eye className="h-3.5 w-3.5" />
                     {video.views}
                   </div>
                 </div>
               </div>
+              <p className="mt-1.5 truncate text-sm md:text-xs font-bold">{video.title}</p>
             </div>
           ))}
         </div>
