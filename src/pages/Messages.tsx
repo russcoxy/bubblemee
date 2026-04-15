@@ -85,7 +85,7 @@ const Messages = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background pb-20 md:mx-auto md:w-[60%]">
+    <div className="min-h-screen bg-background pb-20">
       <AppHeader />
       <div className="flex items-center justify-between px-4 pt-2 pb-2">
         <h1 className="text-3xl font-extrabold">Messages</h1>

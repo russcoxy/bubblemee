@@ -19,7 +19,7 @@ const Leaderboard = () => {
   const [inviteCode, setInviteCode] = useState("");
 
   return (
-    <div className="min-h-screen bg-background pb-20 md:mx-auto md:w-[60%]">
+    <div className="min-h-screen bg-background pb-20">
       {/* ─── Sub-pages: Join / Create ─── */}
       {tab === "private" && privateView === "join" && (
         <div className="min-h-screen bg-background">
