@@ -9,6 +9,7 @@ import TroubleSigningIn from "./pages/TroubleSigningIn";
 import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import Discover from "./pages/Discover";
+import Posts from "./pages/Posts";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/signup" element={<SignUp />} />
           <Route path="/home" element={<Home />} />
           <Route path="/discover" element={<Discover />} />
+          <Route path="/posts" element={<Posts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
