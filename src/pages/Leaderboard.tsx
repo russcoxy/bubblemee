@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TrendingUp, Play, Music, Trophy, Search, Plus, ArrowRightFromLine, ChevronLeft } from "lucide-react";
 import BottomNav from "@/components/BottomNav";
+import AppHeader from "@/components/AppHeader";
 
 type Tab = "global" | "private";
 type TimeFilter = "week" | "month" | "all";
@@ -87,7 +88,8 @@ const Leaderboard = () => {
       {/* ─── Main Leaderboard ─── */}
       {(tab === "global" || (tab === "private" && privateView === "list")) && (
         <>
-          <header className="px-4 pt-6 pb-2">
+          <AppHeader />
+          <div className="px-4 pt-4 pb-2">
             <div className="flex items-center gap-2">
               <TrendingUp className="h-6 w-6 text-primary" />
               <h1 className="text-3xl font-extrabold">Leaderboard</h1>
@@ -108,7 +110,7 @@ const Leaderboard = () => {
                 </button>
               ))}
             </div>
-          </header>
+          </div>
 
           <main className="px-4">
             {tab === "global" && (
