@@ -106,7 +106,7 @@ const Profile = () => {
         {activeTab === "feed" && (
           <div className="grid grid-cols-2 gap-0.5 md:grid-cols-3">
             {feedVideos.map((video, i) => (
-              <div key={i} className={`relative ${i === 0 ? "row-span-2" : ""}`}>
+              <div key={i} className="relative">
                 <img src={video.thumb} alt="" className="aspect-[3/4] w-full object-cover" />
                 {video.featured && (
                   <div className="absolute left-2 top-2 rounded bg-foreground/70 px-2 py-0.5 text-[10px] font-bold uppercase text-white">
