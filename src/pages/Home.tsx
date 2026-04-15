@@ -123,7 +123,7 @@ const Home = () => {
 
         {/* ─── Trending ─── */}
         <h2 className="mb-3 text-xl font-extrabold">Trending</h2>
-        <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-6">
+        <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4">
           {trendingVideos.map((video, i) => (
             <div key={i} className="flex flex-col">
               <div className="relative aspect-[3/4] overflow-hidden rounded-xl bg-muted">
