@@ -110,7 +110,7 @@ const Home = () => {
       <main className="px-4">
         {/* ─── Dancers row ─── */}
         <h2 className="mb-3 mt-2 text-xl font-extrabold">Dancers</h2>
-        <div className="mb-5 flex gap-4 overflow-x-auto pb-1 scrollbar-none">
+        <div className="mb-5 flex gap-4 md:gap-8 overflow-x-auto pb-1 scrollbar-none">
           {dancers.map((d) => (
             <div key={d.name} className="flex w-16 shrink-0 flex-col items-center gap-1">
               <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-primary/30">
