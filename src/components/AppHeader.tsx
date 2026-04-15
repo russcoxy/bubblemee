@@ -11,7 +11,7 @@ const AppHeader = () => {
       <div className="flex items-center justify-between">
         <img src="https://i.pravatar.cc/40?img=5" alt="avatar" className="h-9 w-9 rounded-full" />
         <img src={logoText} alt="BubbleMee" className="h-7" />
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 md:gap-5">
           <button aria-label="Notifications"><Bell className="h-6 w-6 text-foreground" /></button>
           <button aria-label="Share"><Send className="h-6 w-6 text-foreground" /></button>
           <button aria-label="Menu" onClick={() => setMenuOpen(true)}><Menu className="h-6 w-6 text-foreground" /></button>
