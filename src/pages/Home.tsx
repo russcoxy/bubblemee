@@ -1,6 +1,9 @@
 import { Play, Eye } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import BottomNav from "@/components/BottomNav";
 import AppHeader from "@/components/AppHeader";
+
+const toSlug = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-$/, "");
 
 /* ─── mock data ─── */
 const dancers = [
