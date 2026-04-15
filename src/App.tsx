@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import OtpVerify from "./pages/OtpVerify";
 import TroubleSigningIn from "./pages/TroubleSigningIn";
 import SignUp from "./pages/SignUp";
+import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/otp" element={<OtpVerify />} />
           <Route path="/trouble" element={<TroubleSigningIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/home" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -31,7 +31,7 @@ const OtpVerify = () => {
       </div>
 
       <Button
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/home")}
         className="h-14 w-full rounded-2xl bg-primary text-lg font-semibold text-primary-foreground hover:bg-primary/90"
         disabled={otp.length < 6}
       >
