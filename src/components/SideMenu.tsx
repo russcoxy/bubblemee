@@ -39,7 +39,7 @@ const SideMenu = ({ open, onOpenChange }: SideMenuProps) => {
 
         {/* Wallet */}
         <div className="px-4 pt-2.5">
-          <div className="rounded-xl px-4 py-3" style={{ backgroundColor: "#c27080" }}>
+          <div className="rounded-xl px-4 py-3" style={{ backgroundColor: "#b5616e" }}>
             <div className="flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ backgroundColor: "rgba(255,255,255,0.2)" }}>
                 <Wallet className="h-4 w-4 text-white" />
